@@ -1,0 +1,175 @@
+\input{header.tex}
+%\documentclass[a4paper,10pt]{article}
+
+\title{Formulario di Meccanica Quantistica}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Parte I: matematica/princìpi}
+Data una funzione d'onda $\psi(x)$, (ampiezza di probabilità) per essere una $p.d.f.$ per una osservabile deve essere normalizzata a uno,
+ossia: $ \int_\mathbb{R} | \psi(x) |^2\; dx = 1 $. \\
+La probabilità si ricava come $ P(x=x_0 + dx)= | \psi(x_0) |^2 $. \\
+\subsection{Trasformata di Fourier in MQ}
+$$
+\hat{\psi}(p)= \frac{1}{\sqrt{2 \pi \hbar}^3} \int_\mathbb{R} d^3 x \, \psi(x,0) e^{-\frac{i}{\hbar} \v{p}\cdot {\v{x}}}$$ 
+Proprietà:
+$$
+ I) \quad \hat{\d{f}{x}} = i \frac{p}{h} \hat{f}(p)  \qquad \qquad II) \quad \hat{(xf)} = i \hbar \d{}{p}\hat{f}(p)
+$$
+$$
+III) \quad \psi(x)= \frac{1}{\sqrt{2 \pi \hbar}^3} \int_\mathbb{R} d^3 p \, \hat{\psi}(x,0) e^{\frac{i}{\hbar} \v{p}\cdot {\v{x}}}$$ 
+$$
+    IV) \quad \int_\mathbb{R} \overline{g(x)} f(x) dx =  \rint \overline{\hat{g}(p)}  \hat{f}(p) dp \qquad \Longrightarrow \qquad \rint |f(x)|^2 dx = \rint |\hat{f}(p)|^2 dp
+$$
+Medie $m-esime$ e ``spread'' data una funzione ampiezza di probabilità:
+$$ \navg{x}{n} = \rint x^n \modq{\psi} \qquad \qquad \Delta x = \sqrt{ \navg{x}{2} - \avg{x}^2}
+$$ 
+\subsection{Basi discrete e continue}
+Una insieme di vettori è sonc se:
+$$ 
+ \bra{n}\ket{m} = \delta_{mn} \qquad \sum_n \ket{n}\bra{n} = \mathbb{I}
+$$
+con $\mathbb{I} $ operatore Identità.
+Per le basi continue:
+$$
+\rint dx \, \con{\varphi_p (x)} \varphi_p' (x)  = \delta(p-p') \qquad 
+\rint dp \, \ket{\varphi_p} \bra{\varphi_p}  = \mathbb{I} 
+$$
+
+\subsection{Velocità di fase e di gruppo}
+$$
+v_f = \frac{\omega}{k} \qquad \qquad \qquad v_g= \d{\omega}{k} = v_{classica}
+$$
+\subsection{$\delta$ di Dirac}
+Definizione:
+$$
+\rint \delta(x-x_0)f(x)dx = f(x_0) \qquad \approx  \qquad 
+\delta(x) = \begin{cases}
+            0,\quad x\neq0 \\
+	    \infty, \quad  x= 0 
+\end{cases}
+$$
+Caso in cui gli zeri della $\delta$ definiti dagli zeri di una generica funzione $g(x)$ con $n$ zeri ($x_i$):
+$$
+\rint \delta(g(x))f(x)dx = \rint \sum_{i=1}^n \frac{\delta(x-x_i)}{|g'(x_i)|} f(x) dx = \sum_{i=1}^n \frac{f(x_i)}{|g'(x_i)|}
+$$
+Piccola formula priva di senso (non dovrebbe converger):
+$$ \rint \frac{dk}{2 \pi} e^{ikx} = \delta(x) $$
+\subsection{Trucco per Trasformata di Fourier in sferiche, con $\psi(r)$}
+Concettualmente: ho $\psi(x)$ e voglio ottenere $\hat{\psi}(p)$, pensandola con $p$ fissato. Vedendola così, metto p nella direzione
+dell'asse $\uv{z}$, ``privilegiato'' nelle sferiche.
+$$
+\hat{\psi}(p)= \frac{1}{\sqrt{2 \pi \hbar}^3} \int_\mathbb{R} d^3 x \, \psi(x,0) e^{-\frac{i}{\hbar} \v{p}\cdot {\v{x}}} =
+ \frac{1}{\sqrt{2 \pi \hbar}^3} \int_\mathbb{R} \psi(r) e^{-\frac{i}{\hbar} pr \cos(\theta) } r^2 \sin(\theta) d\theta d\phi =
+$$  
+Si pone $ t = \cos(\theta)$, e si sbatte via il $\sin(\theta)$
+\section{Accenni di MQ}
+\subsection{Evoluzione temporale di un pacchetto}
+Data la $\hat{psi}$ ottengo la $ \psi(x,t)$:
+$$
+\hat{\psi} \Longrightarrow \psi(x,t) = \rint \frac{dp}{\sqrt{2 \pi \hbar}} e^{ \frac{i}{\hbar} (px - \frac{p^2 t}{2m})}
+$$
+\subsubsection{Pacchetto con distribuzione momenti gaussiana}
+$$
+\hat{\psi} =  \left( \frac{a^2}{2 \pi \hbar^2}\right)^{\frac{1}{4}} e^{- \frac{a^2}{4 \hbar^2} (p-p_0)^2}
+$$
+$$
+\psi(x,t)= \left(\frac{2a^2}{\pi} \right)^{\frac{1}{4}} \frac{1}{ \sqrt{ a^2 + \frac{ 2 i \hbar t }{m}}} e^{- \frac{(x-\frac{p_0t}{m})}{a^2 + \frac{2i\hbar t}{m}}
+\frac{i}{\hbar} p_0 x  - 	\frac{i}{\hbar} 	\frac{p_0^2 t}{2m} }
+$$
+\subsection{Equazione di Schr\"{o}dinger}
+$$ 
+  i\hbar \p{}{t}\ket{\psi} \, = -\frac{\hbar^2}{2m}\ket{\psi} + V \ket{\psi}  = \ham \ket{\psi}
+$$
+Inoltre si ricava che:
+$$
+E \geq V_{min}
+$$
+dove $V_{min}$ è il minimo del potenziale.
+\subsubsection{Equazione di continuità}
+$$
+\pd{\modq{\psi}}{t} + \div{\left( \con{\psi} \, \lap\psi - \psi \, \lap\con{\psi} \right) } = 0
+$$
+\subsection{Problemi stazionari monodimensionali}
+Caso in cui $ V= V(x)$, ossia indipendente dal tempo:
+$$	\psi(x,t) \, = \, \varphi(x) \, e^{ -\frac{i}{\hbar} E t } \qquad \qquad \varphi(x) \in L^2(\mathbb{R}) 
+$$	 
+Sbattendo dentro l'ansatz nell'equazione di Schr\"{o}dinger otteniamo la SSE (stationary Schr\"{o}dinger equation):
+$$
+-\frac{\hbar}{2m} \, \lap \varphi(x) + V(x) \varphi(x) = E \varphi(x)
+$$ 
+\subsubsection{Condizioni di raccordo}
+\begin{description}
+ \item[$V(x)$ discontinuo in $x_0$ : ] $\qquad \varphi ' (x) \in \mathcal{C}^1 $
+  \item[$V(x) = \infty$ in $x_0$ : ] $	\qquad \varphi(x_0) = 0 $
+ \item[$V(x) = \alpha \, \delta (x-x_0)$ : ] $\qquad \varphi'(x_{0}^{+}) - \varphi(x_{0}^{-}) = -\frac{2 m \alpha}{\hbar^2} \varphi(x_0)$
+\end{description}
+\subsubsection{Coefficienti di trasmissione e riflessione}
+$$
+T = \left| \frac{J_{trasm}}{J_{inc}}\right|  \qquad \qquad R = \left| \frac{J_{rifl}}{J_{inc}} \right| \qquad \Longrightarrow \qquad T + R = 1 
+$$ 
+
+
+\section{Operatori}
+\subsection{Momento angolare ``orbitale''}
+$$
+L_x = -i\hbar \left(y {\partial\over \partial z} - z {\partial\over \partial y}\right)
+$$
+
+$$
+L_y = -i\hbar \left(z {\partial\over \partial x} - x {\partial\over \partial z}\right)
+$$
+
+$$ L_z = -i\hbar \left(x {\partial\over \partial y} - y {\partial\over \partial x}\right)
+$$
+Soddisfano il commutatore dei momenti angolari:
+$$
+\left[\hat{L_i},\hat{L_j}\right]= i \hbar \epsilon_{ijk} \hat{L_k}
+$$
+
+
+Generica matrice di rotazione:
+$$
+R_{xyz}(\alpha, \beta, \gamma) = \begin{pmatrix} \cos \alpha \cos \beta \cos \gamma - 
+\sin \alpha \sin \gamma & \sin \alpha \cos \beta \cos \gamma + \cos \alpha \sin 
+\gamma & -\sin \beta \cos \gamma \\ -\cos \alpha \cos \beta \sin \gamma & -
+\sin \alpha \cos \beta \sin \gamma + \cos \alpha \cos \gamma & \sin \beta \sin \gamma \\ 
+\cos \alpha \sin \beta & \sin \alpha \sin \beta & \cos \beta \end{pmatrix}
+$$
+Rotazione intorno all'asse z:
+$$
+R_z(\alpha) = \begin{pmatrix} \cos \alpha & -\sin \alpha & 0 \\ \sin \alpha & \cos \alpha & 0 \\ 0 & 0 & 1 \end{pmatrix}
+$$
+\section{Basi ortonormali varie}
+\subsection{Polinomi di Legendre}
+$$
+{d \over dx} \left[ (1-x^2) {d \over dx} P(x) \right] + n(n+1)P(x) = 0
+$$
+La formula generale è:
+$$
+P_n(x) = \frac{1}{(2^n n!)}{d^n \over dx^n } \left[ (x^2-1)^n \right] 
+$$
+e i primi polinomi sono:
+$$
+	P_0(x)=1 \qquad	P_1(x)=x	 \qquad 	P_2(x) = \frac{1}{2}(3x^2 - 1)		\qquad P_3(x) = \frac{1}{2}(5x^3 - 3x)
+$$
+$$
+	\qquad P_4(x) = \frac{1}{8}(35x^4 - 30x^2 + 3) \qquad P_5(x) = \frac{1}{8}(63x^5 - 70x^3 + 15x)
+	\qquad P_6(x) = \frac{1}{16}(231x^6 - 315x^4 + 105x^2 - 5)
+$$
+Mentre le funzioni associati di Legendre (quelle che entrano nella armoniche sferiche) sono:
+$$
+P_{l}^m (x) = (1-x^2)^{\frac{m}{2}}\frac{d^m}{dx^m} P_l (x)
+$$
+\subsection{Armoniche sferiche}
+
+$$
+ Y^m_l (\theta,\varphi)= {(-1)^{\frac{m+|m|}{2}}} \sqrt{ \frac{2l+1}{4\pi}
+\frac{(l-\mid m \mid)!}{(l+\mid m \mid)!} }
+P^{ m}_l(\cos\theta) e^{im\varphi} 
+$$
+\end{document}
