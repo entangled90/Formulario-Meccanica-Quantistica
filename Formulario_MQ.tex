@@ -11,7 +11,7 @@
 \section{Parte I: matematica/princìpi}
 Data una funzione d'onda $\psi(x)$, (ampiezza di probabilità) per essere una $p.d.f.$ per una osservabile deve essere normalizzata a uno,
 ossia: $ \int_\mathbb{R} | \psi(x) |^2\; dx = 1 $. \\
-La probabilità si ricava come $ P(x=x_0 + dx)= | \psi(x_0) |^2 $. \\
+La probabilità si ricava come $ P(x\in\left[x_0,x_0 + dx\right])= | \psi(x_0) |^2 $. \\
 \subsection{Trasformata di Fourier in MQ}
 $$
 \hat{\psi}(p)= \frac{1}{\sqrt{2 \pi \hbar}^3} \int_\mathbb{R} d^3 x \, \psi(x,0) e^{-\frac{i}{\hbar} \v{p}\cdot {\v{x}}}$$ 
@@ -56,7 +56,7 @@ Caso in cui gli zeri della $\delta$ definiti dagli zeri di una generica funzione
 $$
 \rint \delta(g(x))f(x)dx = \rint \sum_{i=1}^n \frac{\delta(x-x_i)}{|g'(x_i)|} f(x) dx = \sum_{i=1}^n \frac{f(x_i)}{|g'(x_i)|}
 $$
-Piccola formula priva di senso (non dovrebbe converger):
+Piccola formula priva di senso (non dovrebbe convergere):
 $$ \rint \frac{dk}{2 \pi} e^{ikx} = \delta(x) $$
 \subsection{Trucco per Trasformata di Fourier in sferiche, con $\psi(r)$}
 Concettualmente: ho $\psi(x)$ e voglio ottenere $\hat{\psi}(p)$, pensandola con $p$ fissato. Vedendola così, metto p nella direzione
