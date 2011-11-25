@@ -80,8 +80,7 @@
 	\newcommand{\ip}[2]{\langle\, #1\, |\, #2\, \rangle}	% prodotto interno in spazio di Hilbert
 %	\newcommand{\ket}[1]{|\, #1 \,\rangle}	% vettore KET
 %	\newcommand{\bra}[1]{\langle\, #1\, |}	% vettore BRA
-\newenvironment{system}{\left\{ \begin{array}{l}}{\end{array} \right.}	% sistema
-	\newenvironment{sys_cond}{\left\{ \begin{array}{ll}}{\end{array} \right.}	% sistema con condizioni a lato
+
 
 % ***********************************************************
 % ********************** END HEADER *************************
