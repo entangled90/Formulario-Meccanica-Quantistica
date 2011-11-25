@@ -114,6 +114,35 @@ $$
 
 
 \section{Operatori}
+\subsection{Momenti angolare}
+
+$$
+\left[\hat{J_i},\hat{J_j}\right]= i \hbar \epsilon_{ijk} \hat{J_k}
+$$
+Per gli operatori che soddisfano questa algebra valgone queste proprietà:
+$$
+\hat{J}^2= \hat{J_x}^2 + \hat{J_y}^2 + \hat{J_z}^2
+\qquad \Longrightarrow \qquad \left[ \hat{J^2}, \hat{J_i} \right] = 0  $$
+Sono diagonalizzabili contemporaneamente con autovalori:
+$$
+\begin{sys_cond}
+ \hat{J}^2 \ket{j,m} = \hbar\, l(l+1) \ket{j,m} & \qquad l  = \frac{n}{2} , n\in \mathbb{N} \\ 
+\hat{J_z} \ket{j,m} = \hbar \, m \ket{j,m}  & \qquad -l \geq m \leq l \mbox{ saltando di interi} 
+\end{sys_cond}
+$$
+Operatore di innalzamento/abbassamento indici:
+$$
+J_+ = J_x + i J_y \qquad \qquad J_ = J_x - i J_y 
+$$
+Commutatori vari:
+$$
+\commu{J_z,J_+} = \hbar \hat{J_+} \qquad \commu{J_z,J_-} = - \hbar \hat{J_-} 
+$$
+Prodotti:
+$$
+J_+ J_- = J^2 - J_z^2 + \hbar J_z \qquad \qquad J_- J_+ = J^2 - J_z^2 - \hbar J_z
+$$
+
 \subsection{Momento angolare ``orbitale''}
 $$
 L_x = -i\hbar \left(y {\partial\over \partial z} - z {\partial\over \partial y}\right)

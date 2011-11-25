@@ -1,23 +1,7 @@
 \input{header.tex}
-%\documentclass[a4paper,10pt]{article}
-\usepackage[utf8x]{inputenc}
-%\usepackage[bottom = 3 cm, top = 3 cm, left = 2.5 cm, right = 2.5 cm]{geometry}
-\usepackage[italian]{babel}
-\usepackage{graphicx}
-%\usepackage{amsmath}
-\usepackage{latexsym}
-%\usepackage{amsfonts}
-\usepackage{verbatim}
-\newcommand{\p}[2]{ \frac{ \partial #1}{ \partial #2}}
-\newcommand{\lap}{\nabla^2}
-\newcommand{\ham}{\mathcal{H}}
-\newcommand{\rint}{\int_\mathbb{R}}
-\newcommand{\modq}[1]{| #1|^2}
-\newcommand{\navg}[2]{\left< #1 ^{#2} \right>}
-\newcommand{\con}[1]{\overline{#1}}
-\newcommand{\ih}{\frac{i}{\hbar}}
+
 \title{Formulario di Meccanica Quantistica}
-\author{Pippo}
+\author{}
 
 \begin{document}
 
@@ -130,6 +114,26 @@ $$
 
 
 \section{Operatori}
+\subsection{Momenti angolare}
+
+$$
+\left[\hat{J_i},\hat{J_j}\right]= i \hbar \epsilon_{ijk} \hat{J_k}
+$$
+Per gli operatori che soddisfano questa algebra valgone queste proprietà:
+$$
+\hat{J}^2= \hat{J_x}^2 + \hat{J_y}^2 + \hat{J_z}^2
+\qquad \Longrightarrow \qquad \left[ \hat{J^2}, \hat{J_i} \right] = 0  $$
+Sono diagonalizzabili contemporaneamente con autovalori:
+$$
+\begin{sys_cond}
+ \hat{J}^2 \ket{j,m} = \hbar\, l(l+1) \ket{j,m} & \qquad l  = \frac{n}{2} , n\in \mathbb{N} \\ 
+\hat{J_z} \ket{j,m} = \hbar \, m \ket{j,m}  & \qquad -l \geq m \leq l \mbox{ saltando di interi} 
+\end{sys_cond}
+$$
+
+
+
+
 \subsection{Momento angolare ``orbitale''}
 $$
 L_x = -i\hbar \left(y {\partial\over \partial z} - z {\partial\over \partial y}\right)
@@ -141,6 +145,132 @@ $$
 
 $$ L_z = -i\hbar \left(x {\partial\over \partial y} - y {\partial\over \partial x}\right)
 $$
+Soddisfano il commutatore dei momenti angolari:
+$$
+\left[\hat{L_i},\hat{L_j}\right]= i \hbar \epsilon_{ijk} \hat{L_k}
+$$
+
+
+Generica matrice di rotazione:
+$$
+R_{xyz}(\alpha, \beta, \gamma) = \begin{pmatrix} \cos \alpha \cos \beta \cos \gamma - 
+\sin \alpha \sin \gamma & \sin \alpha \cos \beta \cos \gamma + \cos \alpha \sin 
+\gamma & -\sin \beta \cos \gamma \\ -\cos \alpha \cos \beta \sin \gamma & -
+\sin \alpha \cos \beta \sin \gamma + \cos \alpha \cos \gamma & \sin \beta \sin \gamma \\ 
+\cos \alpha \sin \beta & \sin \alpha \sin \beta & \cos \beta \end{pmatrix}
+$$
+Rotazione intorno all'asse z:
+$$
+R_z(\alpha) = \begin{pmatrix} \cos \alpha & -\sin \alpha & 0 \\ \sin \alpha & \cos \alpha & 0 \\ 0 & 0 & 1 \end{pmatrix}
+$$
+
+\subsection{Spin}
+
+
+
+Spin $s = 1/2$:
+$$ S_z = \frac{\hbar}{2}\matrice{2}{1&0\\0&-1} $$
+\begin{equation}
+	\label{spin:inn_abb:mah}
+	\begin{system}
+		S_+\,\ket{-} = \hbar\,\ket{+} \\ S_-\,\ket{+} = \hbar\,\ket{-}
+	\end{system}
+	\quad \Longrightarrow \quad
+	S_+ = \hbar\matrice{2}{0 & 1 \\ 0 & 0} \quad \mbox{e} \quad S_- = \hbar\matrice{2}{0 & 0 \\ 1 & 0}
+\end{equation}
+\begin{equation}
+	\label{spin:S1_S2}
+	S_x = S_1 = \frac{S_+ + S_-}{2} = \frac{\hbar}{2}\matrice{2}{0 & 1 \\ 1 & 0}
+	\qquad \mbox{e} \qquad
+	S_y = S_2 = \frac{S_+ - S_-}{2i} = \frac{\hbar}{2}\matrice{2}{0 & -i \\ i & 0}
+\end{equation}
+%
+Definendo le \textbf{matrici di Pauli}
+\begin{equation}
+	\label{mat_pauli}
+	\sigma_1 = \matrice{2}{0&1\\1&0}\quad \mbox{,} \qquad
+	\sigma_2 = \matrice{2}{0&-i\\i&0}\quad \mbox{,} \qquad
+	\sigma_3 = \matrice{2}{1&0\\0&-1}
+\end{equation}
+possiamo scrivere complessivamente
+\begin{equation}
+	\label{spin:S123} \boxed{\quad S_i = \frac{\hbar}{2}\,\sigma_i \quad }
+\end{equation}
+%
+%
+Operatori spin $s = 1$
+\begin{equation}
+	\label{spin1:S+S-}
+	S_- = \hbar\sqrt{2}\matrice{3}{0&0&0 \\ 1 & 0 & 0 \\ 0 & 1 & 0}
+	\qquad \mbox{e} \qquad
+	S_+ = \hbar\sqrt{2}\matrice{3}{0 & 1 & 0 \\ 0 & 0 & 1 \\ 0 & 0 & 0}
+\end{equation}
+\begin{subequations}
+	\label{spin1:SxSySz}
+	\begin{align}
+		S_z = \hbar\matrice{3}{1&0&0\\0&0&0\\0&0&-1}\\[2ex]
+		S_x = \frac{S_+ + S_-}{2} = \frac{\hbar}{\sqrt{2}}\matrice{3}{0&1&0\\1&0&1\\0&1&0}\\[2ex]
+		S_y = \frac{S_+ - S_-}{2i} = \frac{\hbar}{\sqrt{2}}\matrice{3}{0&-i&0\\i&0&-i\\0&i&0}
+	\end{align}
+\end{subequations}
+Autovalori e autostati per spin 1:
+\begin{center}
+	\begin{tabular}{ccc}
+	Operatore & Autovalore & Autostato \\
+\hline
+	\multirow{3}*{$S_x$} & $\hbar$ & $ \ket{1,1}_x = \dfrac{1}{2}\vettore{1\\ \sqrt{2} \\ 1}$\\[4ex]
+%		\cline{2-3}
+	& $0$ & $\ket{1,0}_x = \dfrac{1}{\sqrt{2}}\vettore{1\\ 0 \\ -1}$\\[4ex]
+%		\cline{2-3}
+	& $-\hbar$ & $\ket{1,-1}_x = \dfrac{1}{2}\vettore{1\\ -\sqrt{2} \\ 1}$\\[4ex]
+\hline
+	\multirow{3}*{$S_y$} & $\hbar$ & $ \ket{1,1}_y = \dfrac{1}{2}\vettore{1\\ i\,\sqrt{2} \\ -1}$\\[4ex]
+%		\cline{2-3}
+	& $0$ & $\ket{1,0}_y = \dfrac{1}{\sqrt{2}}\vettore{1\\ 0 \\ 1}$\\[4ex]
+%		\cline{2-3}
+	& $-\hbar$ & $\ket{1,-1}_y = \dfrac{1}{2}\vettore{1\\ -i\,\sqrt{2} \\ -1}$\\[4ex]
+\hline
+	\multirow{3}*{$S_z$} & $\hbar$ & $ \ket{1,1}_z = \vettore{1\\ 0 \\ 0}$\\[4ex]
+%		\cline{2-3}
+	& $0$ & $\ket{1,0}_z = \vettore{0\\ 1 \\ 0}$\\[4ex]
+%		\cline{2-3}
+	& $-\hbar$ & $\ket{1,-1}_z = \vettore{0\\ 0 \\ 1}$\\[4ex]
+\hline
+	\end{tabular}
+\end{center}
+%
+%
+Relazioni tra stati $\ket{\pm,\pm}$ di una coppia di elettroni, con gli stati di singoletto/tripletto:
+\begin{subequations}
+	\begin{align}
+		\mbox{singoletto}:\qquad & \left\{ \ket{0,0} = \frac{\ket{+,-} - \ket{-,+}}{\sqrt{2}} \right.\\[3ex]
+		\mbox{tripletto}:\qquad &
+			\begin{system}
+				\ket{1,1} = \ket{+,+}\\[2ex]
+				\ket{1,0} = \dfrac{\ket{+,-}+\ket{-,+}}{\sqrt{2}}\\[2ex]
+				\ket{1,-1} = \ket{-,-}
+			\end{system}
+	\end{align}
+\end{subequations}
+%
+%
+Cambi di base di per momento angolare con $l = 1$:
+\begin{subequations}
+	\label{spin1:scomp_xz}
+	\begin{align}
+		&\ket{1,1} = \frac{\ket{1,1}_x + \ket{1,-1}_x + \sqrt{2}\,\ket{1,0}_x}{2}\\[2ex]
+		&\ket{1,0} = \frac{\ket{1,1}_x - \ket{1,-1}_x}{\sqrt{2}}\\[2ex]
+		&\ket{1,-1} = \frac{\ket{1,1}_x + \ket{1,-1}_x - \sqrt{2}\,\ket{1,0}_x}{2}
+	\end{align}
+\end{subequations}
+\begin{subequations}
+	\label{spin1:scomp_yz}
+	\begin{align}
+		&\ket{1,1} = \frac{\ket{1,1}_y + \ket{1,-1}_y + \sqrt{2}\,\ket{1,0}_y}{2}\\[2ex]
+		&\ket{1,0} = \frac{\ket{1,1}_y - \ket{1,-1}_y}{i\,\sqrt{2}}\\[2ex]
+		&\ket{1,-1}= \frac{\sqrt{2}\,\ket{1,0}_y - \ket{1,1}_y - \ket{1,-1}_y}{2}
+	\end{align}
+\end{subequations}
 \section{Basi ortonormali varie}
 \subsection{Polinomi di Legendre}
 $$
