@@ -1,11 +1,10 @@
 \input{header.tex}
 
+
 \title{Formulario di Meccanica Quantistica}
 \author{}
-
-\begin{document}
-
 \maketitle
+
 
 
 \section{Parte I: matematica/princìpi}
@@ -138,8 +137,10 @@ Commutatori vari:
 $$
 \commu{J_z,J_+} = \hbar \hat{J_+} \qquad \commu{J_z,J_-} = - \hbar \hat{J_-} 
 $$
-
-
+Prodotti:
+$$
+J_+ J_- = J^2 - J_z^2 + \hbar J_z \qquad \qquad J_- J_+ = J^2 - J_z^2 - \hbar J_z
+$$
 
 \subsection{Momento angolare ``orbitale''}
 $$

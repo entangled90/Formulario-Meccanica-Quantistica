@@ -19,7 +19,11 @@
 \usepackage{verbatim} % commenti estesi
 \usepackage[utf8x]{inputenc}
 \usepackage{multirow}
+\usepackage{subfigure}
+
 \makeatletter % Need for anything that contains an @ command 
+
+
 %  COMMANDS 
 \renewcommand{\maketitle} % Redefine maketitle to conserve space
 { \begingroup \vskip 10pt \begin{center} \large {\bf \@title}
@@ -82,7 +86,7 @@
 %	\newcommand{\bra}[1]{\langle\, #1\, |}	% vettore BRA
 \newenvironment{system}{\left\{ \begin{array}{l}}{\end{array} \right.}	% sistema
 	\newenvironment{sys_cond}{\left\{ \begin{array}{ll}}{\end{array} \right.}	% sistema con condizioni a lato
-\newcommand{\commu}[2]{ \left[ \hat{#1}, \hat{#2} \right]
+\newcommand{\commu}[2]{ \left[ \hat{#1}, \hat{#2} \right]}
 
 % ***********************************************************
 % ********************** END HEADER *************************

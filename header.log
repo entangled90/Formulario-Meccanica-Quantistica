@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2012/dev/Arch Linux) (format=pdflatex 2011.11.12)  25 NOV 2011 08:25
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2012/dev/Arch Linux) (format=pdflatex 2011.11.12)  25 NOV 2011 10:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -310,9 +310,29 @@ File: uni-global.def 2004/10/17 UCS: Unicode global data
 (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen145
 )
-\c@prop=\count121
-\c@thm=\count122
-\c@dfn=\count123
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip55
+\subfigcapskip=\skip56
+\subfigcaptopadj=\dimen146
+\subfigbottomskip=\skip57
+\subfigcapmargin=\dimen147
+\subfiglabelskip=\skip58
+\c@subfigure=\count121
+\c@lofdepth=\count122
+\c@subtable=\count123
+\c@lotdepth=\count124
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip59
+\subfig@bottom=\skip60
+)
+\c@prop=\count125
+\c@thm=\count126
+\c@dfn=\count127
 )
 ! Emergency stop.
 <*> header.tex
@@ -321,10 +341,10 @@ File: uni-global.def 2004/10/17 UCS: Unicode global data
 
  
 Here is how much of TeX's memory you used:
- 3717 strings out of 493633
- 51142 string characters out of 3148831
+ 3881 strings out of 493633
+ 53356 string characters out of 3148831
  136420 words of memory out of 3000000
- 6989 multiletter control sequences out of 15000+200000
+ 7147 multiletter control sequences out of 15000+200000
  3940 words of font info for 15 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  31i,0n,32p,327b,36s stack positions out of 5000i,500n,10000p,200000b,50000s

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2012/dev/Arch Linux) (format=pdflatex 2011.11.12)  25 NOV 2011 10:05
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2012/dev/Arch Linux) (format=pdflatex 2011.11.26)  1 DEC 2011 10:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -310,10 +310,31 @@ File: uni-global.def 2004/10/17 UCS: Unicode global data
 (/usr/share/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen145
 )
-\c@prop=\count121
-\c@thm=\count122
-\c@dfn=\count123
-) (./Formulario_MQ.aux)
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip55
+\subfigcapskip=\skip56
+\subfigcaptopadj=\dimen146
+\subfigbottomskip=\skip57
+\subfigcapmargin=\dimen147
+\subfiglabelskip=\skip58
+\c@subfigure=\count121
+\c@lofdepth=\count122
+\c@subtable=\count123
+\c@lotdepth=\count124
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip59
+\subfig@bottom=\skip60
+)
+\c@prop=\count125
+\c@thm=\count126
+\c@dfn=\count127
+)
+(./Formulario_MQ.aux)
 \openout1 = `Formulario_MQ.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
@@ -330,24 +351,23 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 6.
 LaTeX Font Info:    Try loading font information for LGR+cmr on input line 6.
-
-(/usr/share/texmf-dist/tex/generic/babel/lgrcmr.fd
+ (/usr/share/texmf-dist/tex/generic/babel/lgrcmr.fd
 File: lgrcmr.fd 2008/06/17 v2.3 Greek Computer Modern
 )
 LaTeX Font Info:    ... okay on input line 6.
 
 (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
-\scratchdimen=\dimen146
+\scratchcounter=\count128
+\scratchdimen=\dimen148
 \scratchbox=\box56
-\nofMPsegments=\count125
-\nofMParguments=\count126
+\nofMPsegments=\count129
+\nofMParguments=\count130
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count127
-\MPscratchDim=\dimen147
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
+\MPscratchCnt=\count131
+\MPscratchDim=\dimen149
+\MPnumerator=\count132
+\makeMPintoPDFobject=\count133
 \everyMPtoPDFconversion=\toks35
 ) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
@@ -425,7 +445,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\Hy@linkcounter=\count130
+\Hy@linkcounter=\count134
 (/usr/share/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2003/11/29 Fixes to fontencodings LGR, T3
 
@@ -469,10 +489,10 @@ Package amsmath Warning: Foreign command \over;
 
 [3] [4] [5] [6] (./Formulario_MQ.aux) ) 
 Here is how much of TeX's memory you used:
- 5389 strings out of 493633
- 76721 string characters out of 3148831
- 158590 words of memory out of 3000000
- 8574 multiletter control sequences out of 15000+200000
+ 5549 strings out of 493633
+ 78912 string characters out of 3148831
+ 160414 words of memory out of 3000000
+ 8728 multiletter control sequences out of 15000+200000
  14045 words of font info for 55 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  38i,16n,32p,353b,531s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -492,7 +512,7 @@ hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm7.pfb>
-Output written on Formulario_MQ.pdf (6 pages, 195079 bytes).
+Output written on Formulario_MQ.pdf (6 pages, 196986 bytes).
 PDF statistics:
  95 PDF objects out of 1000 (max. 8388607)
  68 compressed objects within 1 object stream

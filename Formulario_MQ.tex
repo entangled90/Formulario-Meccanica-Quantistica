@@ -1,11 +1,11 @@
 \input{header.tex}
 
+
 \title{Formulario di Meccanica Quantistica}
 \author{}
-
 \begin{document}
-
 \maketitle
+
 
 
 \section{Parte I: matematica/princìpi}
@@ -205,6 +205,36 @@ possiamo scrivere complessivamente
 \begin{equation}
 	\label{spin:S123} \boxed{\quad S_i = \frac{\hbar}{2}\,\sigma_i \quad }
 \end{equation}
+Per lo spin in una direzione generica la matrice è:
+$$
+	\vec{S}\cdot{\vec{n}} = \matrice{2}{\cos{\theta} & \sin{\theta}e^{-i{\varphi} } \\
+	\sin{\theta}e^{i{\varphi}} & \cos{\theta} }
+$$
+Gli autovettori per i vari operatori di spin sono:
+\begin{center}
+	\begin{tabular}{ccc}
+	Operatore & Autovalore & Autostato \\
+\hline
+	\multirow{2}*{$S_x$} & $\frac{\hbar}{2}$ & $ \ket{+}_x = \dfrac{1}{\sqrt{2}}\vettore{1\\  1}$\\[4ex]
+%		\cline{2-3}
+	& $-\frac{\hbar}{2}$ & $\ket{-}_x = \dfrac{1}{\sqrt{2}}\vettore{1\\ - 1}$\\[4ex]
+\hline
+	\multirow{2}*{$S_y$} & $\frac{\hbar}{2}$ & $ \ket{+}_y = \dfrac{1}{\sqrt{2}}\vettore{1\\ i}$\\[4ex]
+%		\cline{2-3}
+	& $-\frac{\hbar}{2}$ & $\ket{-}_y = \dfrac{1}{\sqrt{2}}\vettore{1\\ - i}$\\[4ex]
+\hline
+
+	\multirow{2}*{$S_z$} & $\frac{\hbar}{2}$ & $ \ket{+} = \vettore{1\\ 0}$\\[4ex]
+%		\cline{2-3}
+	& $-\frac{\hbar}{2}$ & $\ket{-} = \vettore{0\\ 1}$\\[4ex]
+\hline
+	\multirow{2}*{$S_n$} & $\frac{\hbar}{2}$ & $ \ket{+}_n = \vettore{\cos\frac{\theta}{2} e^{-i\frac{\varphi}{2} }\\ \sin \frac{\theta}{2} e^{i\frac{\varphi}{2}   }}$\\[4ex]
+%		\cline{2-3}
+	& $-\frac{\hbar}{2}$ & $\ket{-}_n = \vettore{-\sin\frac{\theta}{2} e^{i\frac{\varphi}{2}}\\ - \cos\frac{\theta}{2} e^{-i\frac{\varphi}{2}}}$\\[4ex]
+\hline
+	
+	\end{tabular}
+\end{center}
 %
 %
 Operatori spin $s = 1$
